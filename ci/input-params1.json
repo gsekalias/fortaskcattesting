@@ -1,30 +1,14 @@
 [
   {
-    "ParameterKey": "GitHubUser",
-    "ParameterValue": "gsekalias"
+    "ParameterKey": "ClassB",
+    "ParameterValue": "34"
   },
   {
-    "ParameterKey": "GitHubRepoName",
-    "ParameterValue": "fortaskcattesting"
+    "ParameterKey": "RetentionInDays",
+    "ParameterValue": "7"
   },
   {
-    "ParameterKey": "SourceRepoBranch",
-    "ParameterValue": "develop"
-  },
-  {
-    "ParameterKey": "ReleaseBranch",
-    "ParameterValue": "master"
-  },
-  {
-    "ParameterKey": "GitHubOAuthToken",
-    "ParameterValue": "github-token"
-  },
-  {
-    "ParameterKey": "QSS3BucketName",
-    "ParameterValue": "$[taskcat_autobucket]"
-  },
-  {
-    "ParameterKey": "QSS3KeyPrefix",
-    "ParameterValue": "assets/"
+    "ParameterKey": "TrafficType",
+    "ParameterValue": "all"
   }
 ]
