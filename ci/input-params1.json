@@ -1,0 +1,30 @@
+[
+  {
+    "ParameterKey": "GitHubUser",
+    "ParameterValue": "gsekalias"
+  },
+  {
+    "ParameterKey": "GitHubRepoName",
+    "ParameterValue": "fortaskcattesting"
+  },
+  {
+    "ParameterKey": "SourceRepoBranch",
+    "ParameterValue": "develop"
+  },
+  {
+    "ParameterKey": "ReleaseBranch",
+    "ParameterValue": "master"
+  },
+  {
+    "ParameterKey": "GitHubOAuthToken",
+    "ParameterValue": "github-token"
+  },
+  {
+    "ParameterKey": "QSS3BucketName",
+    "ParameterValue": "$[taskcat_autobucket]"
+  },
+  {
+    "ParameterKey": "QSS3KeyPrefix",
+    "ParameterValue": "assets/"
+  }
+]
