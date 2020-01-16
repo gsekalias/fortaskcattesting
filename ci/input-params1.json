@@ -2,13 +2,5 @@
   {
     "ParameterKey": "ClassB",
     "ParameterValue": "34"
-  },
-  {
-    "ParameterKey": "RetentionInDays",
-    "ParameterValue": "7"
-  },
-  {
-    "ParameterKey": "TrafficType",
-    "ParameterValue": "ALL"
   }
 ]

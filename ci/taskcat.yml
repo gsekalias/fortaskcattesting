@@ -14,12 +14,12 @@ global:
 #   - sa-east-1
 #   - us-east-1
 #   - us-east-2
-#   - us-west-1
+   - us-west-1
 #   - us-west-2
   reporting: true
  
 tests:
-  quickstart-taskcat-ci-test1:
+  fortaskcattesting-test1:
     parameter_input: input-params1.json
     template_file: initial-infra.yaml
     regions:
