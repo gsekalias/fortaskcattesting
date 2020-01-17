@@ -3,6 +3,8 @@ project:
   regions:
   - us-west-1
   - us-west-2
+  - eu-west-2
+  - eu-west-3
 tests:
   default:
     template: ./templates/initial-infra.yaml
