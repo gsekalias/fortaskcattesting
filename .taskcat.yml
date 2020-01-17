@@ -1,0 +1,7 @@
+project:
+  name: fortaskcattesting
+  regions:
+  - us-west-2
+tests:
+  default:
+    template: ./templates/initial-infra.yaml
