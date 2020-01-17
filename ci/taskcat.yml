@@ -14,7 +14,7 @@ global:
 #   - us-east-1
 #   - us-east-2
 #   - us-west-1
-   - us-west-2
+#   - us-west-2
   reporting: true
 tests:
   fortaskcattesting-test1:
@@ -22,9 +22,9 @@ tests:
     template_file: initial-infra.yaml
     regions:
 #      - us-east-1
-##      - us-east-2
+#      - us-east-2
 #      - us-west-1
-#      - us-west-2
+      - us-west-2
   # code-commit-pipeline-test:
   #   parameter_input: input-params-codecommit.json
   #   template_file: taskcat-ci-pipeline.yaml.template
