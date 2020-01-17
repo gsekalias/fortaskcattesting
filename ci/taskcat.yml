@@ -10,7 +10,7 @@ global:
 #   - ap-southeast-2
 #   - ca-central-1
 #   - eu-central-1
-#   - eu-west-1
+   - eu-west-1
 #   - sa-east-1
 #   - us-east-1
 #   - us-east-2
@@ -19,13 +19,13 @@ global:
   reporting: true
  
 tests:
-  quickstart-taskcat-ci-test1:
+  fortaskcattesting-test1:
     parameter_input: input-params1.json
     template_file: initial-infra.yaml
     regions:
 #      - us-east-1
 #      - us-east-2
-      - us-west-1
+#      - us-west-1
 #      - us-west-2
   # code-commit-pipeline-test:
   #   parameter_input: input-params-codecommit.json
