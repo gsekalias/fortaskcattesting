@@ -271,7 +271,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: "Ethereum Network Ports"
-      GroupName: "Ethereum_Network_SG"
+      GroupName: "Fake_Network_SG"
       VpcId: !Ref VPC
       SecurityGroupIngress:
       - IpProtocol: 'udp'
