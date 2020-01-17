@@ -1,6 +1,7 @@
 project:
   name: fortaskcattesting
   regions:
+  - us-west-1
   - us-west-2
 tests:
   default:
