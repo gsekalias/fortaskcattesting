@@ -4,8 +4,8 @@ project:
   - us-west-2
   - eu-west-2
   - eu-west-3
+  template: ./templates/initial-infra.yaml
 tests:
   default:
-    template: ./templates/initial-infra.yaml
     parameters:
-      KeyPair: ClassB
+      ClassB: 34
