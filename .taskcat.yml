@@ -7,3 +7,5 @@ project:
 tests:
   default:
     template: ./templates/initial-infra.yaml
+    parameters:
+      KeyPair: ClassB
