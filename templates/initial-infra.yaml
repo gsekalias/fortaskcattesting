@@ -2,7 +2,7 @@
 #######################################################################################
 # initial-infra test3 - upgraded taskcat package
 #
-####################################################################################### 
+#######################################################################################
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'VPC: public and private subnets in two availability zones with NAT Gateways'
 Metadata:
