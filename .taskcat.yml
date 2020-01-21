@@ -8,4 +8,4 @@ project:
 tests:
   default:
     parameters:
-      ClassB: 34
+      ClassB: 36
