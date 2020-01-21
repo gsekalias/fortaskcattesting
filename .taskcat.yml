@@ -2,8 +2,6 @@ project:
   name: fortaskcattesting
   regions:
   - us-west-2
-  - eu-west-2
-  - eu-west-3
   template: ./templates/lambdaLayers.yaml
 tests:
   dev:
