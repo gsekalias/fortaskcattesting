@@ -6,6 +6,7 @@ project:
   - eu-west-3
   template: ./templates/lambdaLayers.yaml
 tests:
-  default:
+  dev:
     parameters:
-      ClassB: 22
+      Environment: "dev"
+      ArtemisOpsBucket: "taskcat-assets"
