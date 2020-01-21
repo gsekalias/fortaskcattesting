@@ -8,3 +8,11 @@ tests:
     parameters:
       Environment: "dev"
       ArtemisOpsBucket: "taskcat-assets"
+  uat:
+    parameters:
+      Environment: "uat"
+      ArtemisOpsBucket: "taskcat-assets"
+  prod:
+    parameters:
+      Environment: "prod"
+      ArtemisOpsBucket: "taskcat-assets"
