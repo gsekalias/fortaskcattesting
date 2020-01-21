@@ -2,10 +2,9 @@ project:
   name: fortaskcattesting
   regions:
   - us-west-2
-  - eu-west-2
-  - eu-west-3
-  template: ./templates/initial-infra.yaml
+  template: ./templates/lambdaLayers.yaml
 tests:
-  default:
+  dev:
     parameters:
-      ClassB: 22
+      Environment: "dev"
+      ArtemisOpsBucket: "taskcat-assets"
