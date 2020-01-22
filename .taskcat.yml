@@ -2,9 +2,17 @@ project:
   name: fortaskcattesting
   regions:
   - us-west-2
-  template: ./templates/lambdaLayers.yaml
+  template: lambdaLayers.yaml
 tests:
   dev:
     parameters:
       Environment: "dev"
+      ArtemisOpsBucket: "taskcat-assets"
+  uat:
+    parameters:
+      Environment: "uat"
+      ArtemisOpsBucket: "taskcat-assets"
+  prod:
+    parameters:
+      Environment: "prod"
       ArtemisOpsBucket: "taskcat-assets"
