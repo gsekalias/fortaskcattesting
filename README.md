@@ -9,5 +9,5 @@ A. .taskcat.yml for cloudformation parameters etc.
 B. The template to be tested that is referenced in .taskcat.yaml
 
 
-# Taskcat Releases
+# Taskcat Releases - for test
 https://github.com/aws-quickstart/taskcat/releases
