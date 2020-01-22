@@ -47,6 +47,14 @@ Mappings:
       awscliLayer: 'layers/awscli.zip'
       pymysqlLayer: 'layers/pymysql.zip'
       pymysql27Layer: 'layers/pymysql27.zip'
+    uat:
+      awscliLayer: 'layers/awscli.zip'
+      pymysqlLayer: 'layers/pymysql.zip'
+      pymysql27Layer: 'layers/pymysql27.zip'
+    prod:
+      awscliLayer: 'layers/awscli.zip'
+      pymysqlLayer: 'layers/pymysql.zip'
+      pymysql27Layer: 'layers/pymysql27.zip'
 Resources:
   ArtemisAWSCLILayer:
     Type: AWS::Lambda::LayerVersion
