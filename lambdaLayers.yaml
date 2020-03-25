@@ -46,15 +46,12 @@ Mappings:
     dev:
       awscliLayer: 'layers/awscli.zip'
       pymysqlLayer: 'layers/pymysql.zip'
-      pymysql27Layer: 'layers/pymysql27.zip'
     uat:
       awscliLayer: 'layers/awscli.zip'
       pymysqlLayer: 'layers/pymysql.zip'
-      pymysql27Layer: 'layers/pymysql27.zip'
     prod:
       awscliLayer: 'layers/awscli.zip'
       pymysqlLayer: 'layers/pymysql.zip'
-      pymysql27Layer: 'layers/pymysql27.zip'
 Resources:
   ArtemisAWSCLILayer:
     Type: AWS::Lambda::LayerVersion
@@ -94,25 +91,6 @@ Resources:
           -
             - !Ref ProjectName
             - 'pymysql-layer'
-  ArtemispyMySQL27Layer:
-    Type: AWS::Lambda::LayerVersion
-    Properties:
-      CompatibleRuntimes:
-        - python2.7
-      Content:
-        S3Bucket: !Ref ArtemisOpsBucket
-        S3Key:
-         Fn::FindInMap:
-          - "Environments"
-          - !Ref Environment
-          - "pymysql27Layer"
-      Description: Artemis Python 2.7 Lambda Layer with pymysql
-      LayerName:
-        Fn::Join:
-          - '-'
-          -
-            - !Ref ProjectName
-            - 'pymysql27-layer'
 Outputs:
   ArtemisAWSCLILayerArn:
     Description: Artemis AWS CLI Lambda Layer
@@ -124,8 +102,3 @@ Outputs:
     Value: !Ref ArtemispyMySQLLayer
     Export:
       Name: !Sub '${AWS::StackName}-ArtemispyMySQLLayerArn'
-  ArtemispyMySQL27LayerArn:
-    Description: Artemis pymysql27 Lambda Layer
-    Value: !Ref ArtemispyMySQL27Layer
-    Export:
-      Name: !Sub '${AWS::StackName}-ArtemispyMySQL27LayerArn'

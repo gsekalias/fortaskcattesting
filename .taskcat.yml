@@ -7,12 +7,12 @@ tests:
   dev:
     parameters:
       Environment: "dev"
-      ArtemisOpsBucket: "taskcat-assets"
+      ArtemisOpsBucket: "taskcat-assets-aabg"
   uat:
     parameters:
       Environment: "uat"
-      ArtemisOpsBucket: "taskcat-assets"
+      ArtemisOpsBucket: "taskcat-assets-aabg"
   prod:
     parameters:
       Environment: "prod"
-      ArtemisOpsBucket: "taskcat-assets"
+      ArtemisOpsBucket: "taskcat-assets-aabg"
