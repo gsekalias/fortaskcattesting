@@ -1,5 +1,5 @@
 project:
-  name: fortaskcattesting
+  name: fortaskcattesting2
   regions:
   - us-west-2
   template: lambdaLayers.yaml
