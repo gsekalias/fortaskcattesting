@@ -7,13 +7,20 @@ project:
   - us-west-2
   template: lambdaLayers.yaml
 tests:
-  dev:
+  dev-us-east-2:
     parameters:
       Environment: "dev"
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
       ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
+  dev-us-west-2:
+    parameters:
+      Environment: "dev"
+      ProjectTeam: "Artemis"
+      ProjectId:  "8675309"
+      Version:  "0.1"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
   uat:
     parameters:
       Environment: "uat"
