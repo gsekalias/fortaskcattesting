@@ -1,3 +1,5 @@
+general:
+  s3_bucket: taskcat-uploadproject
 project:
   name: fortaskcattesting2
   regions:
