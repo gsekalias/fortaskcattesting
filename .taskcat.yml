@@ -3,17 +3,9 @@ general:
 project:
   name: fortaskcattesting2
   regions:
-  - us-east-2
   - us-west-2
   template: lambdaLayers.yaml
 tests:
-  dev-us-east-2:
-    parameters:
-      Environment: "dev"
-      ProjectTeam: "Artemis"
-      ProjectId:  "8675309"
-      Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
   dev-us-west-2:
     parameters:
       Environment: "dev"
