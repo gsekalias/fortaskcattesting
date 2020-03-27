@@ -19,11 +19,11 @@ tests:
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
   prod:
     parameters:
       Environment: "prod"
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
