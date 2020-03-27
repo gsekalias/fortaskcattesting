@@ -3,27 +3,27 @@ general:
 project:
   name: fortaskcattesting2
   regions:
-  - us-west-2
+  - us-east-2
   template: lambdaLayers.yaml
 tests:
-  dev-us-west-2:
+  dev:
     parameters:
       Environment: "dev"
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
   uat:
     parameters:
       Environment: "uat"
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
   prod:
     parameters:
       Environment: "prod"
       ProjectTeam: "Artemis"
       ProjectId:  "8675309"
       Version:  "0.1"
-      ArtemisOpsBucket: "taskcat-assets-aabg-us-west-2"
+      ArtemisOpsBucket: "taskcat-assets-aabg-us-east-2"
