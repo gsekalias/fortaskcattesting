@@ -1,0 +1,104 @@
+# Authored by Steven Cox for support or feedback reach out at steven.cox@accenture.com
+AWSTemplateFormatVersion: 2010-09-09
+Description: Artemis Python 3.7 Lambda Layers
+Parameters:
+  Environment:
+    Type: String
+    Description: Envrionment Used
+    ConstraintDescription: Must be either dev, uat, or prod
+    AllowedValues:
+      - dev
+      - uat
+      - prod
+  ProjectTeam:
+    Type: String
+    Description: Project Team Name
+    Default: Artemis
+    MinLength: 1
+    MaxLength: 20
+    AllowedPattern: ^[a-zA-Z0-9]*$
+    ConstraintDescription: must only contain letters (uppercase and lowercase) and numbers
+  ProjectName:
+    Type: String
+    Description: Project Name
+    Default: artemis
+    MinLength: 1
+    MaxLength: 20
+    AllowedPattern: ^[a-zA-Z0-9]*$
+    ConstraintDescription: must only contain letters (uppercase and lowercase) and numbers
+  ProjectId:
+    Type: String
+    Description: Project Id
+    Default: '8675309'
+    MinLength: 1
+    MaxLength: 10
+    AllowedPattern: ^[a-zA-Z0-9]*$
+    ConstraintDescription: must only contain letters (uppercase and lowercase) and numbers
+  Version:
+    Default: '0.1'
+    Description: Template Version
+    Type: String
+  ArtemisOpsBucket:
+    Description: Artemis Ops Bucket
+    Type: String
+Mappings:
+  Environments:
+    dev:
+      awscliLayer: 'layers/awscli.zip'
+      pymysqlLayer: 'layers/pymysql.zip'
+    uat:
+      awscliLayer: 'layers/awscli.zip'
+      pymysqlLayer: 'layers/pymysql.zip'
+    prod:
+      awscliLayer: 'layers/awscli.zip'
+      pymysqlLayer: 'layers/pymysql.zip'
+Resources:
+  ArtemisAWSCLILayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      CompatibleRuntimes:
+        - python3.7
+      Content:
+        S3Bucket: !Ref ArtemisOpsBucket
+        S3Key:
+          Fn::FindInMap:
+            - "Environments"
+            - !Ref Environment
+            - "awscliLayer"
+      Description: Artemis Python 3.7 Lambda Layer with AWS CLI
+      LayerName:
+        Fn::Join:
+          - '-'
+          -
+            - !Ref ProjectName
+            - 'awscli-layer'
+  ArtemispyMySQLLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      CompatibleRuntimes:
+        - python3.7
+      Content:
+        S3Bucket: !Ref ArtemisOpsBucket
+        S3Key:
+         Fn::FindInMap:
+          - "Environments"
+          - !Ref Environment
+          - "pymysqlLayer"
+      Description: Artemis Python 3.7 Lambda Layer with pymysql
+      LayerName:
+        Fn::Join:
+          - '-'
+          -
+            - !Ref ProjectName
+            - 'pymysql-layer'
+Outputs:
+  ArtemisAWSCLILayerArn:
+    Description: Artemis AWS CLI Lambda Layer
+    Value: !Ref ArtemisAWSCLILayer
+    Export:
+      Name: !Sub '${AWS::StackName}-ArtemisAWSCLILayerArn'
+  ArtemispyMySQLLayerArn:
+    Description: Artemis pymysql Lambda Layer
+    Value: !Ref ArtemispyMySQLLayer
+    Export:
+      Name: !Sub '${AWS::StackName}-ArtemispyMySQLLayerArn'
